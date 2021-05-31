@@ -16,3 +16,4 @@ class Address{
     
     let first=new Address("Yamini","Mahi", "Mahadevpura", "Banglore", "KA", 247615, 9014066209, "yaminivundela12@gmail.com");
     console.log("Welcome to my Address book by [YAMINI ] \n---------------------\n"+first.getDetails());
+    
