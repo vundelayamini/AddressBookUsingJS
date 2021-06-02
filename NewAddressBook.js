@@ -207,5 +207,12 @@ function countByCity(city) {
 function countByState(state) {
     return addressBookArray.filter(contact => contact.state == state).reduce((count, contact) => count += 1, 0)
 }
-console.log("number of Person in city " +countByCity("Virar"));
-console.log("number of Person in state " +countByState("Maharashtra"));
+console.log("number of Person in city " +countByCity("Chennai"));
+console.log("number of Person in state " +countByState("Banglore"));
+//UC11-to sort the entries in the address book alphabetically by Person’s name
+function sortByName() {
+    addressBookArray.sort((a, b) => a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase()));
+    console.log("Sorted Array : ")
+    addressBookArray.forEach(contact => console.log(contact.toString()));
+}
+ sortByName();
