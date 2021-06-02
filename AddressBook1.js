@@ -1,3 +1,4 @@
+//UC1-Create contact
 class Address{
     constructor(f_name, l_name, address, city , state, zip, phoneNumber, email ){
         this.f_name=f_name;
@@ -16,4 +17,3 @@ class Address{
     
     let first=new Address("Yamini","Mahi", "Mahadevpura", "Banglore", "KA", 247615, 9014066209, "yaminivundela12@gmail.com");
     console.log("Welcome to my Address book by [YAMINI ] \n---------------------\n"+first.getDetails());
-    
