@@ -156,4 +156,10 @@ function deleteContact() {
 }
 
 deleteContact();
+//UC6-Ability to find a person with name delete it from the array
+function numberOfContact() {
+    let totalCount =  addressBookArray.reduce(((totalCount) => { totalCount +=1; return totalCount; }), 0);
+    console.log("Total Number of Contacts in AddressBook : " +totalCount);
+}
 
+numberOfContact();
