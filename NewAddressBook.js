@@ -156,10 +156,21 @@ function deleteContact() {
 }
 
 deleteContact();
-//UC6-Ability to find a person with name delete it from the array
+//UC6-Ability to find number of contacts in addressbook
 function numberOfContact() {
     let totalCount =  addressBookArray.reduce(((totalCount) => { totalCount +=1; return totalCount; }), 0);
     console.log("Total Number of Contacts in AddressBook : " +totalCount);
 }
-
+//UC7-Duplicate entry for the same person in address book.
 numberOfContact();
+function duplicateEntry() {
+    let userInput = prompt("Enter name to check Entry in addressbook : ");
+    addressBookArray.forEach(addressBook => {
+        if(addressBook.firstName == userInput) {
+            console.log("Contact already exists in the book");
+        } else {
+            console.log("Contact not exists in the book");
+        }
+});
+}
+duplicateEntry();
