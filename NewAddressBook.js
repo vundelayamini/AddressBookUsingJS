@@ -96,10 +96,10 @@ catch(e){
 }
 
 //UC3-Create new address book
-let addressBook2 = new AddressBook("Pavani", "Somi", "Himayath Nagar", "Hyderabad", "Telangana", 550001, 9440969971,"Pavani12@gmail.com",);
+let addressBook1= new AddressBook("Pavani", "Somi", "Himayath Nagar", "Hyderabad", "Telangana", 550001, 9440969971,"Pavani12@gmail.com",);
 let addressBookArray= new Array();
 addressBookArray.push(addressBook);
-addressBookArray.push(addressBook1);
+addressBookArray.push(addressBook2);
 addressBookArray.push(addressBook2);
 console.log("\nNew Contact Added to Array " +addressBookArray);
 //UC4-To find existing contact person using their name and edit it.
@@ -143,5 +143,17 @@ addressBookArray.forEach(addressBook => {
 }
 
 editPerson();
+//UC5-Edit the contact details
+function deleteContact() {
+    let userInput = prompt("Enter name to Delete Entry : ");
+    addressBookArray.forEach(addressBook => {
+        if(addressBook.firstName == userInput) {
+            addressBookArray.splice(addressBookArray.indexOf(addressBook), 1)
+            console.log("Record Deleted");
+            console.log(addressBookArray);
+        }
+    });
+}
 
+deleteContact();
 
